@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renobac Construction & Rénovlement Bâtiment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="custom-cursor" id="customCursor"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="#home" class="navbar-logo">Renobac<span class="logo-dot">.</span></a>
+      <div class="navbar-links" id="navbarLinks">
+        <a href="#home" class="nav-link active" aria-current="page">Accueil</a>
+        <a href="#about" class="nav-link">À Propos</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#team" class="nav-link">Équipe</a>
+        <a href="#projects" class="nav-link">Projets</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu de navigation" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <!-- HOME PAGE -->
+    <section id="home" class="page-section active" aria-label="Accueil">
+      <div class="hero">
+        <canvas id="particleCanvas" class="hero-canvas"></canvas>
+        <div class="hero-content">
+          <h1 class="hero-headline">
+            <span class="headline-word">Bâtir</span>
+            <span class="headline-word">l'Avenir,</span>
+            <span class="headline-word">Rénover</span>
+            <span class="headline-word">le</span>
+            <span class="headline-word">Présent</span>
+          </h1>
+          <p class="hero-subheading">Artisans du bâtiment, experts en rénovation, passionnés par votre projet.</p>
+          <div class="hero-cta">
+            <a href="#services" class="btn btn-primary">Nos Services</a>
+            <a href="#contact" class="btn btn-outline">Contactez-Nous</a>
+          </div>
+          <div class="scroll-indicator">
+            <span class="scroll-chevron">⌄</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-bar section-padding">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item" data-counter="200" data-suffix="+">Projets</div>
+            <div class="stat-item" data-counter="25" data-suffix="+">Ans d'Expérience</div>
+            <div class="stat-item" data-counter="98" data-suffix="%">Satisfaction</div>
+            <div class="stat-item" data-counter="50" data-suffix="+">Experts</div>
+          </div>
+        </div>
+      </div>
+
+      <section class="services-preview section-padding" data-scroll-reveal>
+        <div class="container">
+          <h2 class="section-title">Nos Services Phares</h2>
+          <div class="services-preview-grid" id="servicesPreviewGrid"></div>
+          <a href="#services" class="link-arrow">Voir Tous Nos Services →</a>
+        </div>
+      </section>
+
+      <section class="featured-projects section-padding" data-scroll-reveal>
+        <div class="container">
+          <h2 class="section-title">Projets Récents</h2>
+          <div class="projects-preview-grid" id="featuredProjectsGrid"></div>
+          <a href="#projects" class="link-arrow">Voir Tous Les Projets →</a>
+        </div>
+      </section>
+
+      <section class="why-choose-us section-padding">
+        <div class="container">
+          <div class="why-choose-grid">
+            <div class="why-choose-text">
+              <h2 class="section-title">Pourquoi Choisir Renobac ?</h2>
+              <ul class="why-choose-list">
+                <li data-scroll-reveal>
+                  <svg class="checkmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="var(--color-accent)"/></svg>
+                  <div><h3>Expertise Reconnue</h3><p>12 ans d'expérience et plus de 150 projets livrés avec succès.</p></div>
+                </li>
+                <li data-scroll-reveal>
+                  <svg class="checkmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="var(--color-accent)"/></svg>
+                  <div><h3>Confiance Clients</h3><p>98% de satisfaction client, basée sur des retours réguliers et transparents.</p></div>
+                </li>
+                <li data-scroll-reveal>
+                  <svg class="checkmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="var(--color-accent)"/></svg>
+                  <div><h3>Innovation Continue</h3><p>Intégration des nouvelles technologies de construction et d'énergie renouvelable.</p></div>
+                </li>
+                <li data-scroll-reveal>
+                  <svg class="checkmark" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="var(--color-accent)"/></svg>
+                  <div><h3>Sécurité Prioritaire</h3><p>Respect strict des normes de sécurité sur tous nos chantiers, sans exception.</p></div>
+                </li>
+              </ul>
+            </div>
+            <div class="why-choose-graphic" data-scroll-reveal>
+              <svg class="why-choose-svg" viewBox="0 0 400 300" aria-hidden="true">
+                <rect x="50" y="100" width="300" height="200" fill="none" stroke="var(--color-accent)" stroke-width="2" class="svg-line-anim"/>
+                <rect x="100" y="50" width="200" height="250" fill="none" stroke="var(--color-navy)" stroke-width="2" class="svg-line-anim"/>
+                <circle cx="200" cy="150" r="30" fill="none" stroke="var(--color-accent)" stroke-width="2" class="svg-line-anim"/>
+                <line x1="200" y1="100" x2="200" y2="200" stroke="var(--color-stone)" stroke-width="1" class="svg-line-anim"/>
+                <line x1="100" y1="150" x2="300" y2="150" stroke="var(--color-stone)" stroke-width="1" class="svg-line-anim"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials section-padding" data-scroll-reveal>
+        <div class="container">
+          <h2 class="section-title">Témoignages Clients</h2>
+          <div class="carousel" id="testimonialCarousel">
+            <div class="carousel-track" id="carouselTrack"></div>
+            <div class="carousel-dots" id="carouselDots"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section id="about" class="page-section" aria-label="À Propos">
+      <div class="page-hero" data-parallax>
+        <div class="page-hero-content">
+          <h1 class="page-hero-title">À Propos de Renobac</h1>
+          <div class="breadcrumb"><a href="#home">Accueil</a> / <span>À Propos</span></div>
+        </div>
+      </div>
+      <section class="section-padding">
+        <div class="container">
+          <div class="mission-vision-grid">
+            <div class="card mission-card" data-scroll-reveal="slide-left">
+              <h2>Notre Mission</h2>
+              <p>Accompagner nos clients dans la réalisation de leurs projets de construction et de rénovation, en alliant savoir-faire traditionnel et innovations technologiques. Nous nous engageons à livrer des ouvrages durables, esthétiques et conformes aux plus hautes normes de qualité.</p>
+            </div>
+            <div class="card vision-card" data-scroll-reveal="slide-right">
+              <h2>Notre Vision</h2>
+              <p>Devenir le leader algérien du bâtiment durable, en transformant le paysage urbain avec des constructions respectueuses de l'environnement et de l'héritage architectural local. Nous visons l'excellence dans chaque détail, pour chaque client.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-padding timeline-section">
+        <div class="container">
+          <h2 class="section-title">Notre Histoire</h2>
+          <div class="timeline" id="timeline"></div>
+        </div>
+      </section>
+      <section class="section-padding">
+        <div class="container">
+          <h2 class="section-title">Nos Valeurs</h2>
+          <div class="values-grid" id="valuesGrid"></div>
+        </div>
+      </section>
+    </section>
+
+    <!-- SERVICES PAGE -->
+    <section id="services" class="page-section" aria-label="Services">
+      <div class="page-hero" data-parallax>
+        <div class="page-hero-content">
+          <h1 class="page-hero-title">Nos Services</h1>
+          <div class="breadcrumb"><a href="#home">Accueil</a> / <span>Services</span></div>
+        </div>
+      </div>
+      <section class="section-padding">
+        <div class="container">
+          <div class="services-grid" id="servicesGrid"></div>
+        </div>
+      </section>
+      <section class="section-padding process-section" data-scroll-reveal>
+        <div class="container">
+          <h2 class="section-title">Notre Processus</h2>
+          <div class="stepper">
+            <div class="stepper-step" data-scroll-reveal>
+              <div class="stepper-number">1</div>
+              <h3>Consultation</h3>
+              <p>Écoute de vos besoins, visite de site et étude de faisabilité gratuite.</p>
+            </div>
+            <div class="stepper-line"></div>
+            <div class="stepper-step" data-scroll-reveal>
+              <div class="stepper-number">2</div>
+              <h3>Devis</h3>
+              <p>Rédaction d'un devis détaillé, transparent et sans surprises, sous 7 jours.</p>
+            </div>
+            <div class="stepper-line"></div>
+            <div class="stepper-step" data-scroll-reveal>
+              <div class="stepper-number">3</div>
+              <h3>Réalisation</h3>
+              <p>Exécution des travaux par nos équipes qualifiées, avec suivi hebdomadaire.</p>
+            </div>
+            <div class="stepper-line"></div>
+            <div class="stepper-step" data-scroll-reveal>
+              <div class="stepper-number">4</div>
+              <h3>Livraison</h3>
+              <p>Remise des clés, garanties activées et accompagnement post-livraison.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cta-banner section-padding">
+        <div class="container">
+          <h2>Prêt à Démarrer Votre Projet?</h2>
+          <a href="#contact" class="btn btn-primary">Contactez-Nous</a>
+        </div>
+      </section>
+    </section>
+
+    <!-- TEAM PAGE -->
+    <section id="team" class="page-section" aria-label="Équipe">
+      <div class="page-hero" data-parallax>
+        <div class="page-hero-content">
+          <h1 class="page-hero-title">Notre Équipe</h1>
+          <div class="breadcrumb"><a href="#home">Accueil</a> / <span>Équipe</span></div>
+        </div>
+      </div>
+      <section class="section-padding">
+        <div class="container">
+          <div class="team-grid" id="teamGrid"></div>
+        </div>
+      </section>
+      <section class="join-us-banner section-padding">
+        <div class="container">
+          <h2>Rejoignez Notre Équipe</h2>
+          <p>Vous êtes passionné par le bâtiment? Envoyez-nous votre CV, nous recrutons régulièrement des nouveaux talents.</p>
+          <a href="mailto:recrutement@renobac.dz" class="btn btn-primary">Envoyer Votre CV</a>
+        </div>
+      </section>
+    </section>
+
+    <!-- PROJECTS PAGE -->
+    <section id="projects" class="page-section" aria-label="Projets">
+      <div class="page-hero" data-parallax>
+        <div class="page-hero-content">
+          <h1 class="page-hero-title">Nos Projets</h1>
+          <div class="breadcrumb"><a href="#home">Accueil</a> / <span>Projets</span></div>
+        </div>
+      </div>
+      <section class="section-padding">
+        <div class="container">
+          <div class="filter-bar" id="filterBar">
+            <button class="filter-btn active" data-filter="Tous">Tous</button>
+            <button class="filter-btn" data-filter="Construction">Construction</button>
+            <button class="filter-btn" data-filter="Rénovation">Rénovation</button>
+            <button class="filter-btn" data-filter="Commercial">Commercial</button>
+            <button class="filter-btn" data-filter="Résidentiel">Résidentiel</button>
+          </div>
+          <div class="projects-grid" id="projectsGrid"></div>
+          <button class="btn btn-outline load-more" id="loadMoreBtn">Voir Plus</button>
+        </div>
+      </section>
+      <div class="modal-overlay" id="projectModal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-label="Détails du projet">
+          <button class="modal-close" aria-label="Fermer la modale">&times;</button>
+          <div class="modal-image"></div>
+          <div class="modal-details">
+            <h2 class="modal-title"></h2>
+            <div class="modal-specs">
+              <p><strong>Catégorie:</strong> <span class="modal-category"></span></p>
+              <p><strong>Localisation:</strong> <span class="modal-location"></span></p>
+              <p><strong>Année:</strong> <span class="modal-year"></span></p>
+              <p><strong>Surface:</strong> <span class="modal-surface"></span></p>
+              <p><strong>Durée:</strong> <span class="modal-duration"></span></p>
+              <p><strong>Client:</strong> <span class="modal-client"></span></p>
+            </div>
+            <p class="modal-description"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT PAGE -->
+    <section id="contact" class="page-section" aria-label="Contact">
+      <div class="page-hero" data-parallax>
+        <div class="page-hero-content">
+          <h1 class="page-hero-title">Contactez-Nous</h1>
+          <div class="breadcrumb"><a href="#home">Accueil</a> / <span>Contact</span></div>
+        </div>
+      </div>
+      <section class="section-padding">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info" data-scroll-reveal>
+              <h2 class="section-title">Nos Coordonnées</h2>
+              <div class="contact-detail">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 16.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="var(--color-accent)"/></svg>
+                <p>Rue Shaboot Boualam<br>Alger, Algérie</p>
+              </div>
+              <div class="contact-detail">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C11.61 21 4 13.39 4 5C4 4.45 4.45 4 5 4H8.5C9.05 4 9.5 4.45 9.5 5C9.5 6.25 9.7 7.45 10.07 8.57C10.18 8.92 10.1 9.31 9.82 9.59L6.62 10.79Z" fill="var(--color-accent)"/></svg>
+                <p>0560 32 62 77</p>
+              </div>
+              <div class="contact-detail">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V8L12 13L20 8V18ZM12 11L4 6H20L12 11Z" fill="var(--color-accent)"/></svg>
+                <p>renobac1998@gmail.com</p>
+              </div>
+              <div class="contact-detail">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM12.5 7H11.5V13L16.2 16.2L17 14.9L13 12.5V7Z" fill="var(--color-accent)"/></svg>
+                <p>Lun - Ven: 08h00 - 17h00<br>Sam: 08h00 - 12h00</p>
+              </div>
+              <div class="social-links">
+                <a href="#" aria-label="LinkedIn" class="social-icon"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88A1.68 1.68 0 0 0 6.88 5.2A1.68 1.68 0 0 0 5.2 6.88A1.68 1.68 0 0 0 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" fill="var(--color-navy)"/></svg></a>
+                <a href="#" aria-label="Facebook" class="social-icon"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M19 3H5A2 2 0 0 0 3 5V19A2 2 0 0 0 5 21H12V14H10V12H12V10.5C12 8.47 13.6 7 15.5 7H17V9H16C15.29 9 15 9.65 15 10.5V12H17.5L17 14H15V21H19A2 2 0 0 0 21 19V5A2 2 0 0 0 19 3Z" fill="var(--color-navy)"/></svg></a>
+                <a href="#" aria-label="Instagram" class="social-icon"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 19.4 19.4 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2ZM7.6 4C5.61 4 4 5.61 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C18.39 20 20 18.39 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5A1.25 1.25 0 0 1 18.5 6.75A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75A1.25 1.25 0 0 1 17.25 5.5ZM12 7A5 5 0 0 1 12 17A5 5 0 0 1 12 7M12 9A3 3 0 0 0 12 15A3 3 0 0 0 12 9Z" fill="var(--color-navy)"/></svg></a>
+              </div>
+              <div class="map-placeholder" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 16.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="var(--color-accent)"/></svg>
+                <span>12 Rue des Bâtisseurs, Alger</span>
+              </div>
+            </div>
+            <div class="contact-form-container" data-scroll-reveal>
+              <h2 class="section-title">Envoyez-nous un Message</h2>
+              <form class="contact-form" id="contactForm">
+                <div class="form-group"><label for="nom">Nom complet *</label><input type="text" id="nom" name="nom" required></div>
+                <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
+                <div class="form-group"><label for="telephone">Téléphone (optionnel)</label><input type="tel" id="telephone" name="telephone"></div>
+                <div class="form-group">
+                  <label for="sujet">Sujet *</label>
+                  <select id="sujet" name="sujet" required>
+                    <option value="" disabled selected>Choisir un sujet</option>
+                    <option value="Construction Neuve">Construction Neuve</option>
+                    <option value="Rénovation Intérieure">Rénovation Intérieure</option>
+                    <option value="Rénovation de Façade">Rénovation de Façade</option>
+                    <option value="Aménagement Paysager">Aménagement Paysager</option>
+                    <option value="Isolation & Étanchéité">Isolation & Étanchéité</option>
+                    <option value="Consultation & Expertise">Consultation & Expertise</option>
+                    <option value="Autre">Autre</option>
+                  </select>
+                </div>
+                <div class="form-group"><label for="message">Message *</label><textarea id="message" name="message" rows="5" required></textarea></div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+              </form>
+              <div class="form-success" id="formSuccess" hidden>
+                <svg class="success-checkmark" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <h3>Message Envoyé!</h3>
+                <p>Merci de nous avoir contactés. Nous reviendrons vers vous sous 24h.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-padding faq-section" data-scroll-reveal>
+        <div class="container">
+          <h2 class="section-title">Questions Fréquentes</h2>
+          <div class="faq-accordion" id="faqAccordion"></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-logo">Renobac<span class="logo-dot">.</span></h3>
+          <p>Artisans du bâtiment, experts en rénovation, passionnés par votre projet. Basés à Alger, nous intervenons partout en Algérie.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Liens Rapides</h4>
+          <a href="#home">Accueil</a>
+          <a href="#about">À Propos</a>
+          <a href="#services">Services</a>
+          <a href="#team">Équipe</a>
+          <a href="#projects">Projets</a>
+          <a href="#contact">Contact</a>
+        </div>
+          <div class="footer-col">
+          <h4>Contact</h4>
+          <p>Rue Shaboot Boualam<br>Alger, Algérie</p>
+          <p>0560 32 62 77<br>renobac1998@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Renobac Construction & Rénovlement Bâtiment. Tous droits réservés.</p>
+        <p>Fait avec ❤️ en Algérie</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
