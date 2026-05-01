@@ -972,21 +972,23 @@ a { color: inherit; text-decoration: none; }
   transition-delay: calc(var(--stagger-index) * 100ms);
 }
 
-/* CUSTOM CURSOR */
-.custom-cursor {
-  position: fixed;
-  width: 12px;
-  height: 12px;
-  background: var(--color-accent);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s;
-  opacity: 0;
+/* PROJECT IMAGES */
+.project-card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
-body:hover .custom-cursor { opacity: 1; }
+/* TEAM PHOTOS */
+.team-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--space-md);
+  border: 3px solid var(--color-accent);
+}
 
 /* PAGE TRANSITIONS */
 .page-section {

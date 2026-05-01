@@ -36,30 +36,8 @@ var scrollHandler = function() {
 };
 window.addEventListener('scroll', scrollHandler, { passive: true });
 
-// CUSTOM CURSOR
-var cursor = document.getElementById('customCursor');
-var mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
-if (!('ontouchstart' in window)) {
-  document.addEventListener('mousemove', function(e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  }, { passive: true });
-
-  var animateCursor = function() {
-    cursorX += (mouseX - cursorX) * 0.1;
-    cursorY += (mouseY - cursorY) * 0.1;
-    cursor.style.left = cursorX + 'px';
-    cursor.style.top = cursorY + 'px';
-    var hoveredEl = document.elementFromPoint(mouseX, mouseY);
-    if (hoveredEl && (hoveredEl.tagName === 'A' || hoveredEl.tagName === 'BUTTON' || hoveredEl.closest('a, button'))) {
-      cursor.style.transform = 'translate(-50%, -50%) scale(2)';
-    } else {
-      cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-    }
-    requestAnimationFrame(animateCursor);
-  };
-  animateCursor();
-}
+// TEAM PHOTO URLS - Replace with actual photo URLs when available
+// Team members can use placeholder photos from a service like https://ui-avatars.com/ or uploaded images
 
 // PARTICLE CANVAS
 var canvas = document.getElementById('particleCanvas');
@@ -289,7 +267,7 @@ if (teamGrid && typeof team !== 'undefined') {
   team.forEach(function(member) {
     var card = document.createElement('div');
     card.className = 'team-card';
-    card.innerHTML = '<div class="team-card-inner"><div class="team-card-front"><div class="team-initials">' + member.initials + '</div><h3>' + member.name + '</h3><p>' + member.role + '</p></div><div class="team-card-back"><h3>' + member.name + '</h3><p>' + member.bio + '</p></div></div>';
+    card.innerHTML = '<div class="team-card-inner"><div class="team-card-front"><img src="' + member.photo + '" alt="' + member.name + '" class="team-photo"><h3>' + member.name + '</h3><p>' + member.role + '</p></div><div class="team-card-back"><h3>' + member.name + '</h3><p>' + member.bio + '</p></div></div>';
     teamGrid.appendChild(card);
   });
 }
@@ -310,7 +288,7 @@ var renderProjects = function(filter) {
     var card = document.createElement('div');
     card.className = 'project-card';
     card.dataset.categories = project.categories.join(',');
-    card.innerHTML = '<div class="project-card-overlay"><span style="background:var(--color-accent);color:white;padding:2px 8px;border-radius:var(--radius-sm);font-size:0.8rem">' + project.category + '</span><h3>' + project.name + '</h3><p>' + project.location + ' \u2022 ' + project.year + '</p><button class="btn btn-outline" style="margin-top:var(--space-sm);font-size:0.9rem;padding:var(--space-xs) var(--space-sm)" data-project-id="' + project.id + '">Détails</button></div>';
+    card.innerHTML = '<div class="project-card-image" style="background-image:url(\'' + project.image + '\')"></div><div class="project-card-overlay"><span style="background:var(--color-accent);color:white;padding:2px 8px;border-radius:var(--radius-sm);font-size:0.8rem">' + project.category + '</span><h3>' + project.name + '</h3><p>' + project.location + ' \u2022 ' + project.year + '</p><button class="btn btn-outline" style="margin-top:var(--space-sm);font-size:0.9rem;padding:var(--space-xs) var(--space-sm)" data-project-id="' + project.id + '">Détails</button></div>';
     projectsGrid.appendChild(card);
   });
   var detailBtns = document.querySelectorAll('[data-project-id]');

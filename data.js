@@ -12,48 +12,56 @@ const team = [
     name: "Abdnour Merdas",
     role: "PDG / CEO",
     initials: "AM",
+    photo: "https://ui-avatars.com/api/?name=Abdnour+Merdas&background=C8862A&color=fff&size=200",
     bio: "Fondateur de Renobac, Abdnour dirige l'entreprise avec plus de 25 ans d'expérience dans le bâtiment et la rénovation. Il a bâti Renobac sur des valeurs de qualité, de confiance et d'excellence."
   },
   {
     name: "Issam Merdas",
     role: "Directeur Technique",
     initials: "IM",
+    photo: "https://ui-avatars.com/api/?name=Issam+Merdas&background=C8862A&color=fff&size=200",
     bio: "Directeur Technique de Renobac, Issam supervise tous les chantiers et garantit le respect des normes de construction. Son expertise technique assure la réussite de chaque projet."
   },
   {
     name: "Amina Kaci",
     role: "Architecte Senior",
     initials: "AK",
+    photo: "https://ui-avatars.com/api/?name=Amina+Kaci&background=C8862A&color=fff&size=200",
     bio: "Spécialisée en architecture bioclimatique, Amina conçoit des espaces à la fois esthétiques et énergétiquement efficaces. Elle a réalisé plus de 40 projets résidentiels haut de gamme."
   },
   {
     name: "Rachid Belkacem",
     role: "Architecte Senior",
     initials: "RB",
+    photo: "https://ui-avatars.com/api/?name=Rachid+Belkacem&background=C8862A&color=fff&size=200",
     bio: "Passionné par le patrimoine bâti, Rachid dirige nos projets de rénovation de façades et de monuments historiques. Son expertise en restauration est reconnue en Algérie."
   },
   {
     name: "Nadia Terki",
     role: "Chef de Projet",
     initials: "NT",
+    photo: "https://ui-avatars.com/api/?name=Nadia+Terki&background=C8862A&color=fff&size=200",
     bio: "Nadia coordonne les chantiers de construction neuve, de la planification à la livraison. Elle est certifiée en gestion de projet PMP et maîtrise les délais serrés."
   },
   {
     name: "Mohamed Salah",
     role: "Chef de Projet",
     initials: "MS",
+    photo: "https://ui-avatars.com/api/?name=Mohamed+Salah&background=C8862A&color=fff&size=200",
     bio: "Mohamed gère nos projets de rénovation intérieure, en liaison directe avec les clients particuliers. Son sens du détail garantit une finition impeccable."
   },
   {
     name: "Youcef Maache",
     role: "Ingénieur Génie Civil",
     initials: "YM",
+    photo: "https://ui-avatars.com/api/?name=Youcef+Maache&background=C8862A&color=fff&size=200",
     bio: "Youcef calcule les structures et assure la solidité de tous nos ouvrages. Il supervise les tests de matériaux et la conformité aux normes sismiques."
   },
   {
     name: "Leila Zerrouki",
     role: "Responsable Commercial",
     initials: "LZ",
+    photo: "https://ui-avatars.com/api/?name=Leila+Zerrouki&background=C8862A&color=fff&size=200",
     bio: "Leila accompagne les clients dans le choix de leurs prestations et établit les devis personnalisés. Elle est la référente pour tous les nouveaux dossiers."
   }
 ];
@@ -66,6 +74,7 @@ const projects = [
     categories: ["Construction", "Commercial"],
     location: "Alger",
     year: 2023,
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop",
     description: "Construction et aménagement complet de l'Hôtel Safir à Alger, comprenant 120 chambres, espaces de réception et restaurant.",
     surface: "8500m²",
     duration: "18 mois",
@@ -78,6 +87,7 @@ const projects = [
     categories: ["Rénovation", "Résidentiel"],
     location: "Alger",
     year: 2022,
+    image: "https://images.unsplash.com/photo-1518782779855-1d4e2858dff6?w=600&h=400&fit=crop",
     description: "Rénovation complète de la structure Dar Atika, préservation du patrimoine architectural avec modernisation des installations.",
     surface: "1200m²",
     duration: "10 mois",
@@ -90,6 +100,7 @@ const projects = [
     categories: ["Rénovation", "Résidentiel"],
     location: "Alger",
     year: 2023,
+    image: "https://images.unsplash.com/photo-1545558010-3c051d6f3c5a?w=600&h=400&fit=crop",
     description: "Rénovation et restauration d'un bâtiment traditionnel à La Casbah, intégration de confort moderne tout en respectant l'architecture d'origine.",
     surface: "800m²",
     duration: "8 mois",
@@ -102,6 +113,7 @@ const projects = [
     categories: ["Rénovation", "Commercial"],
     location: "Alger",
     year: 2021,
+    image: "https://images.unsplash.com/photo-1584464491033-066a4bf3ea4?w=600&h=400&fit=crop",
     description: "Travaux de restauration et d'entretien du Monument des Martyrs, un projet d'envergure nationale nécessitant une expertise technique rigoureuse.",
     surface: "3000m²",
     duration: "12 mois",
@@ -114,6 +126,7 @@ const projects = [
     categories: ["Construction", "Résidentiel"],
     location: "Séhawla",
     year: 2024,
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop",
     description: "Construction d'une villa de standing de 4 étages avec finitions haut de gamme, système de domotique et sécurité intégrée.",
     surface: "480m²",
     duration: "14 mois",
@@ -126,6 +139,7 @@ const projects = [
     categories: ["Construction", "Résidentiel"],
     location: "Les Palmiers, Alger",
     year: 2024,
+    image: "https://images.unsplash.com/photo-1600596542815-ffad1c34cd59?w=600&h=400&fit=crop",
     description: "Villa de luxe de 4 étages dans le quartier des Palmiers Maritimes, avec vue mer, piscine et aménagement paysager complet.",
     surface: "520m²",
     duration: "15 mois",
@@ -138,6 +152,7 @@ const projects = [
     categories: ["Construction", "Résidentiel"],
     location: "Delis, Bumerdas",
     year: 2023,
+    image: "https://images.unsplash.com/photo-1600601937934-3623107c0f8e?w=600&h=400&fit=crop",
     description: "Construction d'une villa de 2 étages avec piscine, carrelage en marbre, cuisine équipée et système de climatisation centralisé.",
     surface: "320m²",
     duration: "10 mois",
@@ -150,6 +165,7 @@ const projects = [
     categories: ["Construction", "Commercial"],
     location: "Alger",
     year: 2020,
+    image: "https://images.unsplash.com/photo-1486406146926-c2099e2f6b3c?w=600&h=400&fit=crop",
     description: "Construction du siège social de Renobac sur la Rue Shaboot Boualam, bâtiment de 3 étages avec bureaux modernes et salle de réunion.",
     surface: "650m²",
     duration: "8 mois",
@@ -162,6 +178,7 @@ const projects = [
     categories: ["Construction", "Résidentiel"],
     location: "El Mohamadia",
     year: 2024,
+    image: "https://images.unsplash.com/photo-1600566753190-23a4bd7f35d?w=600&h=400&fit=crop",
     description: "Villa individuelle de standing à Les Palmiers El Mohamadia, 3 étages, finitions luxe, portail automatique et système d'alarme.",
     surface: "380m²",
     duration: "11 mois",
@@ -174,6 +191,7 @@ const projects = [
     categories: ["Rénovation", "Résidentiel"],
     location: "Alger",
     year: 2022,
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop",
     description: "Projet de restauration de plusieurs bâtiments du patrimoine architectural algérois, préservation des façades et structures d'origine.",
     surface: "2500m²",
     duration: "16 mois",
