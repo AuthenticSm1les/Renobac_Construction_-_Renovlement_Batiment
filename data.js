@@ -8,6 +8,13 @@ const companyInfo = {
 };
 
 const team = [
+	  {
+    name: "Khidarlamine Hamdi",
+    role: "Chef Programmeur",
+    initials: "KH",
+    photo: "https://ui-avatars.com/api/?name=Khidarlamine+Hamdi&background=C8862A&color=fff&size=200",
+    bio: "Chef Programmeur, Khidarlamine Hamdi est originaire de Laghouat et a étudié à l'Université Innopolis. Il supervise les solutions numériques et l'infrastructure informatique de Renobac."
+  },
   {
     name: "Abdnour Merdas",
     role: "PDG / CEO",
