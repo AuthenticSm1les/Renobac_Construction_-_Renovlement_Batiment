@@ -246,14 +246,147 @@ a { color: inherit; text-decoration: none; }
   60% { transform: translateX(-50%) translateY(-5px); }
 }
 
-/* STATS */
-.stats-bar { background: var(--color-navy); color: white; padding: var(--space-xl) 0; }
+/* STATS BAR */
+.stats-bar {
+  background-color: #1B2A4A;
+  color: #FFFFFF;
+  padding: 4rem 0;
+}
+
+.stats-bar .stats-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+  color: #FFFFFF;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 1rem;
+}
+
+.stat-number {
+  font-size: 2.8rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1;
+  color: #FFFFFF;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #C8862A;
+  margin-top: 4px;
+}
+
+.stat-desc {
+  display: block;
+  font-size: 0.85rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  opacity: 0.75;
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .stat-number {
+    font-size: 2rem !important;
+  }
+  .stat-item {
+    padding: 0.5rem !important;
+  }
+}
+
+.stats-bar .stats-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  margin-bottom: var(--space-lg, 2rem);
+  opacity: 0.85;
+  color: white;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  gap: var(--space-lg, 2rem);
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 1rem;
+  padding: var(--space-sm, 1rem);
+}
+
+.stat-number {
+  font-size: 2.8rem;
+  font-size: calc(1.8rem + 1vw);
+  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-weight: 700;
+  line-height: 1;
+  color: white !important;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #C8862A !important;
+  color: var(--color-accent, #C8862A) !important;
+  margin-top: 4px;
+}
+
+.stat-desc {
+  display: block;
+  font-size: 0.85rem;
+  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-weight: 400;
+  opacity: 0.75;
+  color: white !important;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .stat-number {
+    font-size: 2rem !important;
+  }
+  .stat-item {
+    padding: 0.5rem !important;
+    padding: var(--space-xs, 0.5rem) !important;
+  }
+}
 
 .stats-bar .stats-intro {
   text-align: center;
   font-size: 1.1rem;
   margin-bottom: var(--space-lg);
   opacity: 0.85;
+  color: white;
 }
 
 .stats-grid {
@@ -266,7 +399,8 @@ a { color: inherit; text-decoration: none; }
 .stat-item {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: 8px;
+  padding: var(--space-sm);
 }
 
 .stat-number {
@@ -274,6 +408,7 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1;
+  color: white;
 }
 
 .stat-label {
@@ -281,7 +416,8 @@ a { color: inherit; text-decoration: none; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-top: var(--space-xs);
+  color: var(--color-accent);
+  margin-top: 4px;
 }
 
 .stat-desc {
@@ -290,6 +426,39 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-body);
   font-weight: 400;
   opacity: 0.75;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .stat-number {
+    font-size: 2rem !important;
+  }
+  .stat-item {
+    padding: var(--space-xs) !important;
+  }
+}
+
+/* GITHUB PAGES OVERRIDE - FORCE STATS COLORS */
+.stats-bar {
+  background: #1B2A4A !important;
+  color: white !important;
+  padding: var(--space-xl) 0 !important;
+}
+
+.stat-number {
+  color: white !important;
+}
+
+.stat-label {
+  color: #C8862A !important;
+}
+
+.stat-desc {
+  color: white !important;
+  opacity: 0.75 !important;
 }
 
 /* SERVICES PREVIEW */
