@@ -14,20 +14,12 @@ const team = [
     photo: "https://ui-avatars.com/api/?name=Abdnour+Merdas&background=C8862A&color=fff&size=200",
     bio: "Fondateur de Renobac, Abdnour dirige l'entreprise avec plus de 25 ans d'expérience dans le bâtiment et la rénovation. Il a bâti Renobac sur des valeurs de qualité, de confiance et d'excellence."
   },
-
   {
     name: "Issam Merdas",
     role: "Directeur Technique",
     initials: "IM",
-    photo: "https://ui-avatars.com/api/?name=Issam+Merdas&background=C8862A&color=fff&size=200",
+    photo: "assets/IssamMerdas.jpg",
     bio: "Directeur Technique de Renobac, Issam supervise tous les chantiers et garantit le respect des normes de construction. Son expertise technique assure la réussite de chaque projet."
-  },
-		{
-    name: "Khidarlamine Hamdi",
-    role: "Chef Programmeur",
-    initials: "KH",
-    photo: "https://ui-avatars.com/api/?name=Khidarlamine+Hamdi&background=C8862A&color=fff&size=200",
-    bio: "Chef Programmeur, Khidarlamine Hamdi est originaire de Laghouat et a étudié à l'Université Innopolis. Il supervise les solutions numériques et l'infrastructure informatique de Renobac."
   },
   {
     name: "Zaki Merdas",
@@ -35,6 +27,13 @@ const team = [
     initials: "ZM",
     photo: "https://ui-avatars.com/api/?name=Zaki+Merdas&background=C8862A&color=fff&size=200",
     bio: "un chauffeur professionnel et rapide qui assure la logistique de nos chantiers. Zaki est un pilier de notre équipe, garantissant que les matériaux et les équipes arrivent à temps sur les sites."
+  },
+	{
+    name: "Khidarlamine Hamdi",
+    role: "Chef Programmeur",
+    initials: "KH",
+    photo: "https://ui-avatars.com/api/?name=Khidarlamine+Hamdi&background=C8862A&color=fff&size=200",
+    bio: "Chef Programmeur, Khidarlamine Hamdi est originaire de Laghouat et a étudié à l'Université Innopolis. Il supervise les solutions numériques et l'infrastructure informatique de Renobac."
   },
   {
     name: "Amina Kaci",
