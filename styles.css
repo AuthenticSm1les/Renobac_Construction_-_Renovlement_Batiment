@@ -726,7 +726,24 @@ a { color: inherit; text-decoration: none; }
   box-shadow: var(--shadow-sm);
 }
 
-.team-card-back { transform: rotateY(180deg); background: var(--color-navy); color: white; }
+.team-card-back { transform: rotateY(180deg); background: var(--color-navy); color: white; overflow: hidden; position: relative; }
+
+.team-card-back-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.team-card-back-content {
+  position: relative;
+  z-index: 1;
+}
 
 .team-initials {
   width: 100px;

@@ -267,7 +267,7 @@ if (teamGrid && typeof team !== 'undefined') {
   team.forEach(function(member) {
     var card = document.createElement('div');
     card.className = 'team-card';
-    card.innerHTML = '<div class="team-card-inner"><div class="team-card-front"><img src="' + member.photo + '" alt="' + member.name + '" class="team-photo"><h3>' + member.name + '</h3><p>' + member.role + '</p></div><div class="team-card-back"><h3>' + member.name + '</h3><p>' + member.bio + '</p></div></div>';
+    card.innerHTML = '<div class="team-card-inner"><div class="team-card-front"><img src="' + member.photo + '" alt="' + member.name + '" class="team-photo"><h3>' + member.name + '</h3><p>' + member.role + '</p></div><div class="team-card-back"><img src="' + member.photo + '" alt="' + member.name + '" class="team-card-back-bg"><div class="team-card-back-content"><h3>' + member.name + '</h3><p>' + member.bio + '</p></div></div></div>';
     teamGrid.appendChild(card);
   });
 }
