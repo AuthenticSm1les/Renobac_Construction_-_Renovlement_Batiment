@@ -3,7 +3,7 @@
 ## TODO
 
 ### High Priority
-- [ ] **Host contact form backend on local machine**
+- [ ] **Make contact form functional** (method TBD: local machine, mailto, or external service)
 
 ### Medium Priority
 - [ ] Add multi-language support (Arabic / French / English / Berber)
