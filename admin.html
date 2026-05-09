@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Renobac Construction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="main-content">
+    <section class="page-section active" aria-label="Admin">
+      <div class="admin-container">
+        <div class="admin-login-screen" id="adminLoginScreen" style="display: block;">
+          <div class="login-card">
+            <h1>Admin Panel</h1>
+            <p class="login-subtitle">Accès Réservé - Gestion Clients & Ouvriers</p>
+            <form id="adminLoginForm" class="login-form">
+              <div class="form-group">
+                <label for="adminPassword">Mot de passe</label>
+                <input type="password" id="adminPassword" name="password" placeholder="Entrez le mot de passe" required>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Se Connecter</button>
+              <div class="login-error" id="loginError" hidden>
+                Mot de passe incorrect. Veuillez réessayer.
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="admin-dashboard" id="adminDashboard" style="display: none;">
+          <div class="admin-header">
+            <div class="admin-title-section">
+              <h1>Tableau de Bord Admin</h1>
+              <p>Gestion Complète des Clients et Ouvriers</p>
+            </div>
+            <button class="btn btn-outline" id="adminLogout">Se Déconnecter</button>
+          </div>
+
+          <div class="admin-tabs">
+            <button class="admin-tab-btn active" data-tab="overview">Aperçu</button>
+            <button class="admin-tab-btn" data-tab="clients">Clients</button>
+            <button class="admin-tab-btn" data-tab="workers">Ouvriers</button>
+            <button class="admin-tab-btn" data-tab="print">Imprimer</button>
+          </div>
+
+          <div class="admin-tab-content active" id="overview">
+            <div class="overview-grid">
+              <div class="overview-card">
+                <div class="card-icon">👥</div>
+                <div class="card-content">
+                  <h3>Clients Totals</h3>
+                  <p class="card-number" id="totalClients">0</p>
+                </div>
+              </div>
+              <div class="overview-card">
+                <div class="card-icon">👷</div>
+                <div class="card-content">
+                  <h3>Ouvriers Totals</h3>
+                  <p class="card-number" id="totalWorkers">0</p>
+                </div>
+              </div>
+              <div class="overview-card">
+                <div class="card-icon">📊</div>
+                <div class="card-content">
+                  <h3>Enregistrements Actifs</h3>
+                  <p class="card-number" id="totalActive">0</p>
+                </div>
+              </div>
+              <div class="overview-card">
+                <div class="card-icon">📅</div>
+                <div class="card-content">
+                  <h3>Dernière Mise à Jour</h3>
+                  <p class="card-date" id="lastUpdate">-</p>
+                </div>
+              </div>
+            </div>
+            <div class="overview-section">
+              <h2>Résumé Récent</h2>
+              <div class="recent-list" id="recentList"></div>
+            </div>
+          </div>
+
+          <div class="admin-tab-content" id="clients">
+            <div class="content-header">
+              <h2>Liste des Clients</h2>
+              <input type="text" class="search-input" id="clientSearch" placeholder="Chercher un client...">
+            </div>
+            <div class="data-table-container">
+              <table class="data-table" id="clientsTable">
+                <thead>
+                  <tr>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Téléphone</th>
+                    <th>Projet</th>
+                    <th>Date d'Inscription</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="clientsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="admin-tab-content" id="workers">
+            <div class="content-header">
+              <h2>Liste des Ouvriers</h2>
+              <input type="text" class="search-input" id="workerSearch" placeholder="Chercher un ouvrier...">
+            </div>
+            <div class="data-table-container">
+              <table class="data-table" id="workersTable">
+                <thead>
+                  <tr>
+                    <th>Nom</th>
+                    <th>Spécialité</th>
+                    <th>Email</th>
+                    <th>Téléphone</th>
+                    <th>Expérience</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="workersTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="admin-tab-content" id="print">
+            <div class="print-section">
+              <h2>Gestion de l'Impression</h2>
+              <p class="print-description">Préparez des documents imprimables pour garder des registres physiques de vos clients et ouvriers.</p>
+              <div class="print-options">
+                <div class="print-option">
+                  <h3>📋 Liste Clients</h3>
+                  <p>Imprime une liste formatée de tous les clients avec leurs informations principales.</p>
+                  <button class="btn btn-primary" id="printClientsBtn">Imprimer les Clients</button>
+                </div>
+                <div class="print-option">
+                  <h3>👷 Liste Ouvriers</h3>
+                  <p>Imprime une liste formatée de tous les ouvriers avec leurs spécialités et expériences.</p>
+                  <button class="btn btn-primary" id="printWorkersBtn">Imprimer les Ouvriers</button>
+                </div>
+                <div class="print-option">
+                  <h3>📑 Rapport Complet</h3>
+                  <p>Génère un rapport complet contenant clients, ouvriers et statistiques.</p>
+                  <button class="btn btn-primary" id="printFullBtn">Imprimer le Rapport Complet</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

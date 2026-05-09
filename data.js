@@ -327,3 +327,176 @@ const timeline = [
     description: "Plus de 200 projets livrés avec succès, de la rénovation du patrimoine aux constructions de villas de luxe."
   }
 ];
+
+// ADMIN DATA
+const adminCredentials = {
+  password: "abdolepatron"
+};
+
+const adminClients = [
+  {
+    id: 1,
+    name: "Ahmed Boudjema",
+    email: "ahmed.boudjema@email.com",
+    phone: "0555 123 456",
+    project: "Résidence Les Palmiers",
+    registrationDate: "2024-01-15",
+    status: "Actif"
+  },
+  {
+    id: 2,
+    name: "Samira Hadj",
+    email: "samira.hadj@email.com",
+    phone: "0666 234 567",
+    project: "Villa Séhawla",
+    registrationDate: "2023-11-22",
+    status: "Actif"
+  },
+  {
+    id: 3,
+    name: "Karim Ziani",
+    email: "karim.ziani@email.com",
+    phone: "0777 345 678",
+    project: "Hôtel Safir Alger",
+    registrationDate: "2023-09-10",
+    status: "Actif"
+  },
+  {
+    id: 4,
+    name: "Fatima Bennour",
+    email: "fatima.bennour@email.com",
+    phone: "0555 456 789",
+    project: "Appartements El Mohamadia",
+    registrationDate: "2024-02-05",
+    status: "Actif"
+  },
+  {
+    id: 5,
+    name: "Mohamed Seghir",
+    email: "mohamed.seghir@email.com",
+    phone: "0666 567 890",
+    project: "Bureau Commercial",
+    registrationDate: "2023-12-01",
+    status: "Actif"
+  },
+  {
+    id: 6,
+    name: "Leila Kerrouche",
+    email: "leila.kerrouche@email.com",
+    phone: "0777 678 901",
+    project: "Rénovation Dar Atika",
+    registrationDate: "2024-01-20",
+    status: "Actif"
+  },
+  {
+    id: 7,
+    name: "Hassan Berrouk",
+    email: "hassan.berrouk@email.com",
+    phone: "0555 789 012",
+    project: "Villa 4 Étages",
+    registrationDate: "2023-10-15",
+    status: "Actif"
+  },
+  {
+    id: 8,
+    name: "Noor Al-Mansouri",
+    email: "noor.mansouri@email.com",
+    phone: "0666 890 123",
+    project: "Complexe Résidentiel",
+    registrationDate: "2024-03-08",
+    status: "Actif"
+  }
+];
+
+const adminWorkers = [
+  {
+    id: 1,
+    name: "Abdnour Merdas",
+    specialty: "PDG / Direction",
+    email: "abdnour@renobac.dz",
+    phone: "0560 32 62 77",
+    experience: "25+ ans",
+    cv: "Fondateur et PDG de Renobac, expert en gestion de projets majeurs de construction et rénovation."
+  },
+  {
+    id: 2,
+    name: "Issam Merdas",
+    specialty: "Directeur Technique",
+    email: "issam@renobac.dz",
+    phone: "0560 32 62 77",
+    experience: "22 ans",
+    cv: "Supervise tous les chantiers, garantit le respect des normes de construction et la qualité des ouvrages."
+  },
+  {
+    id: 3,
+    name: "Khidarlamine Hamdi",
+    specialty: "Chef Programmeur",
+    email: "khidarlamine@renobac.dz",
+    phone: "0560 32 62 77",
+    experience: "8 ans",
+    cv: "Chef Programmeur, supervise les solutions numériques et l'infrastructure informatique de Renobac."
+  },
+  {
+    id: 4,
+    name: "Amina Kaci",
+    specialty: "Architecte Senior",
+    email: "amina.kaci@renobac.dz",
+    phone: "0560 32 62 77",
+    experience: "18 ans",
+    cv: "Spécialisée en architecture bioclimatique, conçoit des espaces esthétiques et énergétiquement efficaces. 40+ projets réalisés."
+  },
+  {
+    id: 5,
+    name: "Rachid Belkacem",
+    specialty: "Architecte Senior",
+    email: "rachid.belkacem@renobac.dz",
+    phone: "0560 32 62 77",
+    experience: "20 ans",
+    cv: "Passionné par le patrimoine bâti, dirige les projets de rénovation de façades et monuments historiques."
+  },
+  {
+    id: 6,
+    name: "Nadia Terki",
+    specialty: "Chef de Projet",
+    email: "nadia.terki@renobac.dz",
+    phone: "0560 32 62 77",
+    experience: "15 ans",
+    cv: "Coordonne les chantiers de construction neuve, certifiée PMP. Maîtrise les délais et budgets serrés."
+  },
+  {
+    id: 7,
+    name: "Mohamed Salah",
+    specialty: "Chef de Projet",
+    email: "mohamed.salah@renobac.dz",
+    phone: "0560 32 62 77",
+    experience: "12 ans",
+    cv: "Gère les projets de rénovation intérieure en liaison directe avec les clients. Sens du détail remarquable."
+  },
+  {
+    id: 8,
+    name: "Youcef Maache",
+    specialty: "Ingénieur Génie Civil",
+    email: "youcef.maache@renobac.dz",
+    phone: "0560 32 62 77",
+    experience: "16 ans",
+    cv: "Calcule les structures et assure la solidité des ouvrages. Supervise les tests de matériaux et conformité sismique."
+  },
+  {
+    id: 9,
+    name: "Leila Zerrouki",
+    specialty: "Responsable Commercial",
+    email: "leila.zerrouki@renobac.dz",
+    phone: "0560 32 62 77",
+    experience: "10 ans",
+    cv: "Accompagne les clients dans le choix des prestations, établit les devis personnalisés. Référente nouveaux dossiers."
+  },
+  {
+    id: 10,
+    name: "Zaki Merdas",
+    specialty: "Chauffeur / Logistique",
+    email: "zaki@renobac.dz",
+    phone: "0560 32 62 77",
+    experience: "14 ans",
+    cv: "Chauffeur professionnel assurant la logistique des chantiers. Garantit l'arrivée à temps des matériaux et équipes."
+  }
+];
